@@ -1,5 +1,80 @@
-h1.sample {
-  font-family: Arial;
-  text-align: center;
-  margin: 3em auto;
+
+div {
+  .game {
+    font-family: "Lucida Console", monospace;
+    text-align: center;
+    margin: auto;
+    box-shadow: 3px 3px 10px gray;
+    height: 80vh;
+    width: 80vh;
+  }
+
+  .header, .footer {
+    position: relative;
+    background-color: white;
+    font-size: 2em;
+    font-weight: bold;
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer #start, .footer #restart, .header #abort {
+    font-family: inherit;
+    color: white;
+    padding: 0.5em 1em;
+    font-size: inherit;
+    background-color: darkturquoise;
+    border-radius: 1em;
+    border: none;
+
+    &:hover {
+      background-color: turquoise;
+    }
+    &:active {
+      box-shadow: inset 0px 0px 10px gray;
+    }
+  }
+
+  .footer #restart, .header #abort {
+    position: absolute;
+    right: 5%;
+    font-size: 0.6em;
+  }
+
+  .board-container {
+    background-color: #ddd;
+    font-weight: bold;
+    height: 70%;
+    width: 100%;
+  }
+
+  .board {
+    border-collapse: collapse;
+    margin: auto;
+    width: 70%;
+    height: 100%;
+    border: 3px solid gray;
+  }
+
+  .switch {
+    width: 20%;
+    height: 20%;
+    color: white;
+    text-align: center;
+    border: 10px solid lightgray;
+  }
+
+  .fill, .win {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-color: rgba(123,104,238,0.5);
+  }
+
+  .win {
+    background-color: teal;
+  }
 }
