@@ -1,10 +1,10 @@
 import React from "react"
 
-import Switch from "switch.jsx"
+import Switch from "components/switch.jsx"
 
 const Row = ({ children, rowIndex }) => {
   return (
-    <tr key={"row" + rowIndex} className="row">
+    <tr className="row">
       { children }
     </tr>
   )
@@ -12,16 +12,16 @@ const Row = ({ children, rowIndex }) => {
 
 const Board = ({ toggleSwitch, switches, gameState }) => {
   return (
-    <div key="board-container" className="board-container">
-      <table key="board" className="board">
+    <div className="board-container">
+      <table className="board">
         <tbody>
 
           {[0,1,2,3,4].map((rowIndex, index) => {
             return (
-              <Row rowIndex={ rowIndex }>
+              <Row key={ "row" + rowIndex} rowIndex={ rowIndex }>
                 {[0,1,2,3,4].map((colIndex, index) => {
                   return (
-                    <Switch key={"switch" + colIndex + rowIndex} col={ colIndex }
+                    <Switch key={"switch" + colIndex + "/" + rowIndex} col={ colIndex }
                       row={ rowIndex } toggleSwitch={ toggleSwitch }
                       active={ switches[colIndex][rowIndex] } gameState={ gameState }/>
                   )

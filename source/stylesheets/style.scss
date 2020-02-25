@@ -1,79 +1,82 @@
+.game {
+  font-family: "Lucida Console", monospace;
+  text-align: center;
+  margin: auto;
+  box-shadow: 3px 3px 10px gray;
+  height: 80vmin;
+  width: 80vmin;
+}
 
-div {
-  .game {
-    font-family: "Lucida Console", monospace;
-    text-align: center;
-    margin: auto;
-    box-shadow: 3px 3px 10px gray;
-    height: 80vmin;
-    width: 80vmin;
+.header, .footer {
+  position: relative;
+  background-color: white;
+  font-size: 5vmin;
+  font-weight: bold;
+  height: 15%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__start, .header__restart, .header__abort {
+  font-family: inherit;
+  color: white;
+  padding: 0.5em 1em;
+  background-color: darkturquoise;
+  border-radius: 1em;
+  border: none;
+
+  &:hover {
+    background-color: turquoise;
   }
-
-  .header, .footer {
-    position: relative;
-    background-color: white;
-    font-size: 5vmin;
-    font-weight: bold;
-    height: 15%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  &:active {
+    box-shadow: inset 0px 0px 10px gray;
   }
+}
 
-  .footer #start, .header #restart, .header #abort {
-    font-family: inherit;
-    color: white;
-    padding: 0.5em 1em;
-    font-size: 4vmin;
-    background-color: darkturquoise;
-    border-radius: 1em;
-    border: none;
+.footer__start {
+  font-size: 4vmin;
+}
 
-    &:hover {
-      background-color: turquoise;
-    }
-    &:active {
-      box-shadow: inset 0px 0px 10px gray;
-    }
-  }
+.header__restart, .header__abort {
+  position: absolute;
+  right: 5%;
+  font-size: 2vmin;
+}
 
-  .header #restart, .header #abort {
-    position: absolute;
-    right: 5%;
-    font-size: 2vmin;
-  }
+.board-container {
+  background-color: #ddd;
+  font-weight: bold;
+  height: 70%;
+  width: 100%;
+}
 
-  .board-container {
-    background-color: #ddd;
-    font-weight: bold;
-    height: 70%;
-    width: 100%;
-  }
+.board {
+  border-collapse: collapse;
+  margin: auto;
+  width: 70%;
+  height: 99%;
+}
 
-  .board {
-    border-collapse: collapse;
-    margin: auto;
-    width: 70%;
-    height: 99%;
-  }
+.switch {
+  width: 20%;
+  height: 20%;
+  color: white;
+  text-align: center;
+  border: 1vmin solid lightgray;
+}
 
-  .switch {
-    width: 20%;
-    height: 20%;
-    color: white;
-    text-align: center;
-    border: 1vmin solid lightgray;
-  }
+.fill, .win {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
 
-  .fill, .win {
-    width: 100%;
-    height: 100%;
-    margin: auto;
-    background-color: rgba(123,104,238,0.5);
-  }
+.fill {
+  background-color: rgba(123,104,238,0.5);
+}
 
-  .win {
-    background-color: teal;
-  }
+.win {
+  background-color: teal;
 }

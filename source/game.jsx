@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 
-import Header from "./header.jsx";
-import Footer from "./footer.jsx";
-import Board from "./board.jsx";
+import Header from "components/header.jsx";
+import Footer from "components/footer.jsx";
+import Board from "components/board.jsx";
 
 const Game = () => {
 
