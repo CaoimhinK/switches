@@ -5,14 +5,14 @@ div {
     text-align: center;
     margin: auto;
     box-shadow: 3px 3px 10px gray;
-    height: 80vh;
-    width: 80vh;
+    height: 80vmin;
+    width: 80vmin;
   }
 
   .header, .footer {
     position: relative;
     background-color: white;
-    font-size: 2em;
+    font-size: 5vmin;
     font-weight: bold;
     height: 15%;
     width: 100%;
@@ -21,11 +21,11 @@ div {
     align-items: center;
   }
 
-  .footer #start, .footer #restart, .header #abort {
+  .footer #start, .header #restart, .header #abort {
     font-family: inherit;
     color: white;
     padding: 0.5em 1em;
-    font-size: inherit;
+    font-size: 4vmin;
     background-color: darkturquoise;
     border-radius: 1em;
     border: none;
@@ -38,10 +38,10 @@ div {
     }
   }
 
-  .footer #restart, .header #abort {
+  .header #restart, .header #abort {
     position: absolute;
     right: 5%;
-    font-size: 0.6em;
+    font-size: 2vmin;
   }
 
   .board-container {
@@ -55,8 +55,7 @@ div {
     border-collapse: collapse;
     margin: auto;
     width: 70%;
-    height: 100%;
-    border: 3px solid gray;
+    height: 99%;
   }
 
   .switch {
@@ -64,7 +63,7 @@ div {
     height: 20%;
     color: white;
     text-align: center;
-    border: 10px solid lightgray;
+    border: 1vmin solid lightgray;
   }
 
   .fill, .win {

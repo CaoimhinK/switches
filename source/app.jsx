@@ -1,11 +1,12 @@
 import React, { Component, useState } from "react"
 
-const Header = ({ gameState, abortGame }) => {
+const Header = ({ gameState, abortGame, startGame }) => {
   return (
     <div className="header">
       {(gameState == "pre_game") && <div>SWITCHES</div>}
       {(gameState == "in_game") && <div>TAP A SWITCH</div>}
       {(gameState == "post_game") && <div>VICTORY</div>}
+      {(gameState == "post_game") && <button id="restart" onClick={ startGame }>RESTART</button>}
       {(gameState == "in_game") && <button id="abort" onClick={ abortGame }>ABORT</button>}
     </div>
   )
@@ -17,7 +18,6 @@ const Footer = ({ gameState, clicks, startGame }) => {
     <div className="footer">
       {(gameState == "pre_game") && <button id="start" onClick={ startGame }>START GAME</button>}
       {(gameState == "in_game" || gameState == "post_game") && <div className="counter">{ clicks } BUTTONS PRESSED</div>}
-      {(gameState == "post_game") && <button id="restart" onClick={ startGame }>RESTART</button>}
     </div>
   )
 }
@@ -144,7 +144,7 @@ const Game = () => {
 
   return (
     <div className="game">
-      <Header gameState={ gameState } abortGame={ abortGame }/>
+      <Header gameState={ gameState } abortGame={ abortGame } startGame={ startGame } />
       <Board toggleSwitch={ toggleSwitch } switches={ switches } gameState={ gameState }/>
       <Footer clicks={ clicks } gameState={ gameState } startGame={ startGame } />
     </div>
