@@ -18,12 +18,20 @@ const Board = ({ toggleSwitch, switches, gameState }) => {
 
           {[0,1,2,3,4].map((rowIndex, index) => {
             return (
-              <Row key={ "row" + rowIndex} rowIndex={ rowIndex }>
+              <Row
+                key={ "row" + rowIndex }
+                rowIndex={ rowIndex }
+              >
                 {[0,1,2,3,4].map((colIndex, index) => {
                   return (
-                    <Switch key={"switch" + colIndex + "/" + rowIndex} col={ colIndex }
-                      row={ rowIndex } toggleSwitch={ toggleSwitch }
-                      active={ switches[colIndex][rowIndex] } gameState={ gameState }/>
+                    <Switch
+                      key={"switch" + colIndex + "/" + rowIndex}
+                      col={ colIndex }
+                      row={ rowIndex }
+                      toggleSwitch={ toggleSwitch }
+                      active={ switches[colIndex][rowIndex] }
+                      gameState={ gameState }
+                    />
                   )
                 })}
               </Row>

@@ -98,9 +98,21 @@ const Game = () => {
 
   return (
     <div className="game">
-      <Header gameState={ gameState } abortGame={ abortGame } startGame={ startGame } />
-      <Board toggleSwitch={ toggleSwitch } switches={ switches } gameState={ gameState }/>
-      <Footer clicks={ clicks } gameState={ gameState } startGame={ startGame } />
+      <Header
+        gameState={ gameState }
+        abortGame={ abortGame }
+        startGame={ startGame }
+      />
+      <Board
+        toggleSwitch={ toggleSwitch }
+        switches={ switches }
+        gameState={ gameState }
+      />
+      <Footer
+        clicks={ clicks }
+        gameState={ gameState }
+        startGame={ startGame }
+      />
     </div>
   )
 }
