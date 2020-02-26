@@ -19,7 +19,7 @@
   align-items: center;
 }
 
-.footer__start, .header__restart, .header__abort {
+%button {
   font-family: inherit;
   color: white;
   padding: 0.5em 1em;
@@ -36,10 +36,12 @@
 }
 
 .footer__start {
+  @extend %button;
   font-size: 4vmin;
 }
 
 .header__restart, .header__abort {
+  @extend %button;
   position: absolute;
   right: 5%;
   font-size: 2vmin;
